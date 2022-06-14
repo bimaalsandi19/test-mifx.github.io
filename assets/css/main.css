@@ -1,0 +1,134 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    height: 100vh;
+    background: black;
+    color: white;
+}
+
+.container{
+    display: none;
+}
+.review-img{
+    flex: 1;
+}
+.review-img img{
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+.review-content{
+    flex: 1;
+    text-align: center;
+    padding: 50px 25px;
+    height: 400px;
+
+}
+h2{
+    font-size: 30px;
+}
+hr{
+    width: 10%;
+    height: 4px;
+    background: white;
+    border: 0;
+}
+h3{
+    font-weight: 100;
+}
+p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.back, .forward{
+    cursor: pointer;
+    color: #fff;
+    background: transparent;
+    font-size: 20px;
+    margin-top: 30px;
+}
+.back{
+   
+    position: absolute;
+    left: 5%;
+    top: 140%;
+    transform: translateX(-50%);
+}
+.forward{
+    position: absolute ;
+    top: 140%;
+    right: 0;
+}
+.review-footer{
+    text-align: center;
+}
+.dots {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+
+  .enable, .dots:hover {
+    background-color: #717161;
+  }
+  
+  /* Faint animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+  
+  @keyframes fade {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+
+  @media screen and (min-width:768px) {
+    .review-img img{
+        width: 50%;
+        object-fit: cover;
+        height: 100vh;
+    }
+    .review-content{
+        flex: 1;
+        text-align: center;
+        margin-top: 180px;
+        padding: 0 3rem;
+        position: absolute;
+        top: 0;
+        right: 1%;
+        width: 40%;
+    }
+    .review-footer{
+        position: absolute;
+        left: 73%;
+        top: 90%;
+    }
+    .back{
+   
+        position: absolute;
+        left: 52%;
+        top: 50%;
+        transform: translateX(-50%);
+    }
+    .forward{
+        position: absolute ;
+        top: 50%;
+        right: 0;
+    }
+  }
